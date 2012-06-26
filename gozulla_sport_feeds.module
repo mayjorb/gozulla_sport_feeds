@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the gozulla sport feeds feature.
+ */
+
+include_once 'gozulla_sport_feeds.features.inc';
