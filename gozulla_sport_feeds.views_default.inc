@@ -91,29 +91,29 @@ function gozulla_sport_feeds_views_default_views() {
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['title']['link_to_node'] = 0;
   /* Field: Content: Description */
-  $handler->display->display_options['fields']['field_feed_item_description']['id'] = 'field_feed_item_description';
-  $handler->display->display_options['fields']['field_feed_item_description']['table'] = 'field_data_field_feed_item_description';
-  $handler->display->display_options['fields']['field_feed_item_description']['field'] = 'field_feed_item_description';
-  $handler->display->display_options['fields']['field_feed_item_description']['label'] = '';
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_feed_item_description']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_feed_item_description']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_feed_item_description']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_feed_item_description']['field_api_classes'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['id'] = 'field_sport_feed_description';
+  $handler->display->display_options['fields']['field_sport_feed_description']['table'] = 'field_data_field_sport_feed_description';
+  $handler->display->display_options['fields']['field_sport_feed_description']['field'] = 'field_sport_feed_description';
+  $handler->display->display_options['fields']['field_sport_feed_description']['label'] = '';
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_sport_feed_description']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_sport_feed_description']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_sport_feed_description']['field_api_classes'] = 0;
   /* Sort criterion: Feeds item: Import date */
   $handler->display->display_options['sorts']['imported']['id'] = 'imported';
   $handler->display->display_options['sorts']['imported']['table'] = 'feeds_item';
@@ -131,7 +131,7 @@ function gozulla_sport_feeds_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'feed_item' => 'feed_item',
+    'sport_feed_item' => 'sport_feed_item',
   );
 
   /* Display: Page */
@@ -158,7 +158,7 @@ function gozulla_sport_feeds_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'feed_item' => 'feed_item',
+    'sport_feed_item' => 'sport_feed_item',
   );
   /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
@@ -186,7 +186,7 @@ function gozulla_sport_feeds_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'feed_item' => 'feed_item',
+    'sport_feed_item' => 'sport_feed_item',
   );
   /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';

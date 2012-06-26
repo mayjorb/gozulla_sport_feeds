@@ -47,23 +47,23 @@ function gozulla_sport_feeds_feeds_importer_default() {
             'unique' => 0,
           ),
           2 => array(
-            'source' => 'description',
-            'target' => 'field_feed_item_description',
-            'unique' => FALSE,
-          ),
-          3 => array(
             'source' => 'url',
             'target' => 'url',
             'unique' => 0,
           ),
-          4 => array(
+          3 => array(
             'source' => 'timestamp',
             'target' => 'created',
             'unique' => FALSE,
           ),
-          5 => array(
+          4 => array(
             'source' => 'tags',
             'target' => 'field_gozulla_sport',
+            'unique' => FALSE,
+          ),
+          5 => array(
+            'source' => 'description',
+            'target' => 'field_sport_feed_description',
             'unique' => FALSE,
           ),
         ),
@@ -117,23 +117,23 @@ function gozulla_sport_feeds_feeds_importer_default() {
             'unique' => 0,
           ),
           2 => array(
-            'source' => 'description',
-            'target' => 'field_feed_item_description',
-            'unique' => FALSE,
-          ),
-          3 => array(
             'source' => 'url',
             'target' => 'url',
             'unique' => 0,
           ),
-          4 => array(
+          3 => array(
             'source' => 'timestamp',
             'target' => 'created',
             'unique' => FALSE,
           ),
-          5 => array(
+          4 => array(
             'source' => 'tags',
             'target' => 'field_gozulla_sport',
+            'unique' => FALSE,
+          ),
+          5 => array(
+            'source' => 'description',
+            'target' => 'field_sport_feed_description',
             'unique' => FALSE,
           ),
         ),
