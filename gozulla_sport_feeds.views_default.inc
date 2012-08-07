@@ -102,11 +102,12 @@ function gozulla_sport_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_sport_feed_description']['alter']['replace_spaces'] = 0;
   $handler->display->display_options['fields']['field_sport_feed_description']['alter']['trim_whitespace'] = 0;
   $handler->display->display_options['fields']['field_sport_feed_description']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['max_length'] = '300';
   $handler->display->display_options['fields']['field_sport_feed_description']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['field_sport_feed_description']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['field_sport_feed_description']['alter']['more_link'] = 0;
   $handler->display->display_options['fields']['field_sport_feed_description']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['trim'] = 1;
   $handler->display->display_options['fields']['field_sport_feed_description']['alter']['html'] = 0;
   $handler->display->display_options['fields']['field_sport_feed_description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_sport_feed_description']['element_default_classes'] = 1;
