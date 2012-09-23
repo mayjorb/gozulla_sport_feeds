@@ -5,3 +5,23 @@
  */
 
 include_once 'gozulla_sport_feeds.features.inc';
+
+
+function gozulla_sport_feeds_form_alter(&$form, &$form_state, $form_id) {
+  
+  //dpm($_GET());
+  //dpm($form);
+  switch ($form_id) {
+    
+    case 'views_exposed_form':
+      if ($form['#id'] == 'views-exposed-form-gozulla-directory-deals-by-sport') {    
+
+        // Using dpm with Devel installed to give me array data on the Views form
+       
+       
+        
+         //dpm($form);
+      }
+    break;
+  }
+}

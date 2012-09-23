@@ -10,7 +10,7 @@
 function gozulla_sport_feeds_views_default_views() {
   $export = array();
 
-  $view = new view;
+  $view = new view();
   $view->name = 'feed_display';
   $view->description = 'displays feed items';
   $view->tag = 'default';
@@ -25,6 +25,7 @@ function gozulla_sport_feeds_views_default_views() {
   $handler->display->display_options['title'] = 'gozulla news';
   $handler->display->display_options['css_class'] = 'feed-item';
   $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -34,87 +35,35 @@ function gozulla_sport_feeds_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['hide_empty'] = 0;
-  $handler->display->display_options['row_options']['default_field_elements'] = 1;
   /* Field: Feeds item: Item URL */
   $handler->display->display_options['fields']['url']['id'] = 'url';
   $handler->display->display_options['fields']['url']['table'] = 'feeds_item';
   $handler->display->display_options['fields']['url']['field'] = 'url';
   $handler->display->display_options['fields']['url']['label'] = '';
   $handler->display->display_options['fields']['url']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['url']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['url']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['url']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['url']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['url']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['url']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['url']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['url']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['url']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['url']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['url']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['url']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['url']['alter']['html'] = 0;
   $handler->display->display_options['fields']['url']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['url']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['url']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['url']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['url']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['url']['display_as_link'] = 0;
+  $handler->display->display_options['fields']['url']['display_as_link'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['path'] = '[url]';
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '34';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['title']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 1;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Description */
   $handler->display->display_options['fields']['field_sport_feed_description']['id'] = 'field_sport_feed_description';
   $handler->display->display_options['fields']['field_sport_feed_description']['table'] = 'field_data_field_sport_feed_description';
   $handler->display->display_options['fields']['field_sport_feed_description']['field'] = 'field_sport_feed_description';
   $handler->display->display_options['fields']['field_sport_feed_description']['label'] = '';
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['field_sport_feed_description']['alter']['max_length'] = '300';
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['trim'] = 1;
-  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_sport_feed_description']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_sport_feed_description']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_sport_feed_description']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_sport_feed_description']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_sport_feed_description']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_sport_feed_description']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_sport_feed_description']['field_api_classes'] = 0;
   /* Sort criterion: Feeds item: Import date */
   $handler->display->display_options['sorts']['imported']['id'] = 'imported';
   $handler->display->display_options['sorts']['imported']['table'] = 'feeds_item';
@@ -137,15 +86,19 @@ function gozulla_sport_feeds_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'feed-display';
 
   /* Display: combined */
   $handler = $view->new_display('block', 'combined', 'block_1');
   $handler->display->display_options['display_description'] = 'displays all sport feeds';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
 
   /* Display: surf */
   $handler = $view->new_display('block', 'surf', 'block_2');
   $handler->display->display_options['display_description'] = 'surf feed';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -168,12 +121,13 @@ function gozulla_sport_feeds_views_default_views() {
   $handler->display->display_options['filters']['tid']['value'] = array(
     0 => '12',
   );
-  $handler->display->display_options['filters']['tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'gozulla_sport';
 
   /* Display: skate */
   $handler = $view->new_display('block', 'skate', 'block_3');
   $handler->display->display_options['display_description'] = 'skate feed';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -196,7 +150,6 @@ function gozulla_sport_feeds_views_default_views() {
   $handler->display->display_options['filters']['tid']['value'] = array(
     0 => '18',
   );
-  $handler->display->display_options['filters']['tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'gozulla_sport';
   $translatables['feed_display'] = array(
     t('Master'),
@@ -210,7 +163,10 @@ function gozulla_sport_feeds_views_default_views() {
     t('Items per page'),
     t('- All -'),
     t('Offset'),
-    t('[url]'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
     t('Page'),
     t('combined'),
     t('displays all sport feeds'),

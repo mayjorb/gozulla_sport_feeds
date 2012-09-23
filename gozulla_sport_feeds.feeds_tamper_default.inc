@@ -110,7 +110,7 @@ function gozulla_sport_feeds_feeds_tamper_default() {
   $feeds_tamper->settings = array(
     'default_value' => '12',
   );
-  $feeds_tamper->weight = 0;
+  $feeds_tamper->weight = 12;
   $feeds_tamper->description = 'Set default value';
   $export['gozulla_surf_feed-tags-set_default_value'] = $feeds_tamper;
 
